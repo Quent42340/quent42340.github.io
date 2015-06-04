@@ -36,9 +36,6 @@ Mais une question s'est alors posée, comment créer une classe `Entity` qui con
 
 Voici ce à quoi je suis arrivé:
 
-```cpp
-```
-
 {% highlight cpp linenos=table %}
 class SceneObject {
 	public:
@@ -85,7 +82,7 @@ Je ne vais pas m'attarder sur ce code, qui, me semble-t-il, est assez simple à 
 
 Afin de fabriquer des entités toutes prêtes, comme une épée ou un monstre, il fallait créer des fabriques. Pour cela, j'ai décidé de faire uniquement des classes avec une fonction statique, par exemple:
 
-```cpp
+{% highlight cpp linenos=table %}
 SceneObject ChestFactory::create(u16 tileX, u16 tileY) {
 	SceneObject object;
 	object.set<PositionComponent>(tileX * 16, tileY * 16, 16, 16);
@@ -95,7 +92,7 @@ SceneObject ChestFactory::create(u16 tileX, u16 tileY) {
 	
 	return object;
 }
-```
+{% endhighlight %}
 
 Cette fonction permet de créer une entité, de la paramétrer en lui assignant des composants, et de la retourner pour un usage ultérieur.
 
@@ -107,7 +104,7 @@ Maintenant qu'on sait faire des composants et les utiliser pour paramétrer des 
 
 Il s'agit ici d'un concept vraiment simple. J'utilise, comme pour les fabriques, des classes statiques. Je vais donner un exemple simple avant de développer:
 
-```cpp
+{% highlight cpp linenos=table %}
 void MovementSystem::process(SceneObject &object) {
 	if(object.has<MovementComponent>()) {
 		auto &movement = object.get<MovementComponent>();
@@ -134,7 +131,7 @@ void MovementSystem::process(SceneObject &object) {
 		movement.v = 0;
 	}
 }
-```
+{% endhighlight %}
 
 Dans un premier temps, on vérifie que l'entité a bien un `MovementComponent` pour pouvoir effectuer le mouvement. Ensuite, on teste si l'entité a un `CollisionComponent` pour appeler une callback qui va vérifier les collisions. Enfin, on vérifie que l'entité a un `PositionComponent` pour lui appliquer le mouvement.
 
