@@ -6,7 +6,6 @@ tagline:
 
 {% for post in site.posts %}
 	<div class="post">
-
 		{% if post.external-url %}
 			<h1>
 				<a href="{{ post.external-url }}">{{ post.title }}</a>
@@ -17,33 +16,23 @@ tagline:
 		{% endif %}
 
 		<div class="post-content">{{ post.content }}</div>
-
 	</div>
+	
+	<hr />
 {% endfor %}
 
-
-
-{% if site.total_pages > 1 %}
-	<div class="postnavigation">
-
-		{% if site.previous_page %}
-			{% if site.page == 2 %}
-				<a class="prev left" href="/">&larr; Newer</a>
-			{% else %}
-				<a class="prev left" href="/page{{site.previous_page}}/">&larr; Newer</a>
-			{% endif %}
-		{% else %}
-			<span class="nope left">&larr; Newer</span>
-		{% endif %}
-
-		<span class="pages">Page {{ site.page }} of {{ site.total_pages }}</span>
-
-		{% if site.next_page %}
-			<a class="next right" href="/page{{site.next_page}}/">Older &rarr;</a>
-		{% else %}
-			<span class="nope right">Older &rarr;</span>
-		{% endif %}
-
-	</div>
-{% endif %}
-
+<div class="pagination">
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path }}" class="previous">&larr; Plus ancien</a>
+	{% else %}
+		<span class="previous">&larr; Plus ancien</span>
+	{% endif %}
+	
+	{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path }}" class="next">Plus récent &rarr;</a>
+	{% else %}
+		<span class="next">Plus récent &rarr;</span>
+	{% endif %}
+	
+	<span class="page_number">Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
+</div>
