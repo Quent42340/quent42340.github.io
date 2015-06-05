@@ -1,0 +1,11 @@
+
+http://blog.gnidmoo.tk/archive.html
+http://blog.gnidmoo.tk/categories.html
+http://blog.gnidmoo.tk/flux_atom.xml
+http://blog.gnidmoo.tk/flux_rss.xml
+http://blog.gnidmoo.tk/index.html
+http://blog.gnidmoo.tk/pages.html
+http://blog.gnidmoo.tk/sitemap.txt
+http://blog.gnidmoo.tk/tags.html
+
+http://blog.gnidmoo.tk/2015/06/03/systeme-dentites-a-composants
