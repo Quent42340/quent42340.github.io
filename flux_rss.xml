@@ -5,8 +5,8 @@
         <description>DevBlog de gnidmoo - Quentin Bazin</description>
         <link>http://blog.gnidmoo.tk</link>
         <atom:link href="http://blog.gnidmoo.tk/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Fri, 05 Jun 2015 17:25:45 +0200</lastBuildDate>
-        <pubDate>Fri, 05 Jun 2015 17:25:45 +0200</pubDate>
+        <lastBuildDate>Fri, 05 Jun 2015 18:15:12 +0200</lastBuildDate>
+        <pubDate>Fri, 05 Jun 2015 18:15:12 +0200</pubDate>
         <ttl>60</ttl>
 
 
@@ -224,6 +224,19 @@
                 <link>http://blog.gnidmoo.tk/2015/06/03/systeme-dentites-a-composants</link>
                 <guid>http://blog.gnidmoo.tk/2015/06/03/systeme-dentites-a-composants</guid>
                 <pubDate>Wed, 03 Jun 2015 00:00:00 +0200</pubDate>
+        </item>
+
+        <item>
+                <title>Pourquoi ce blog ?</title>
+                <description>
+&lt;p&gt;Ça fait un moment que j’avais envie de commencer un blog où j’explique ce que je fais, comment je le fais et pourquoi. Puisqu’il n’est jamais trop tard, je commence maintenant.&lt;/p&gt;
+
+&lt;p&gt;Au niveau du contenu, je pense que ça sera principalement du C++, l’avancement de mes projets, du linux, des astuces pour vim, des coups de gueules et peut-être d’autres choses, qui sait.&lt;/p&gt;
+
+</description>
+                <link>http://blog.gnidmoo.tk/2015/06/02/pourquoi-ce-blog</link>
+                <guid>http://blog.gnidmoo.tk/2015/06/02/pourquoi-ce-blog</guid>
+                <pubDate>Tue, 02 Jun 2015 00:00:00 +0200</pubDate>
         </item>
 
 

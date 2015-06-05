@@ -9,3 +9,4 @@ http://blog.gnidmoo.tk/sitemap.txt
 http://blog.gnidmoo.tk/tags.html
 
 http://blog.gnidmoo.tk/2015/06/03/systeme-dentites-a-composants
+http://blog.gnidmoo.tk/2015/06/02/pourquoi-ce-blog

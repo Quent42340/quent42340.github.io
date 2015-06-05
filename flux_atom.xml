@@ -4,7 +4,7 @@
  <title>DevBlog de gnidmoo</title>
  <link href="http://blog.gnidmoo.tk/atom.xml" rel="self"/>
  <link href="http://blog.gnidmoo.tk"/>
- <updated>2015-06-05T17:25:45+02:00</updated>
+ <updated>2015-06-05T18:15:12+02:00</updated>
  <id>http://blog.gnidmoo.tk</id>
  <author>
    <name>Quentin Bazin</name>
@@ -224,6 +224,19 @@
 &lt;p&gt;Ce type d’architecture est vraiment pratique et modulable, facilite la maintenabilité, mais chacun a son implémentation. La mienne ne vous plaira peut-être pas, ou ne sera peut-être pas adaptée pour vos besoins, mais elle était adaptée aux miens.&lt;/p&gt;
 
 &lt;p&gt;Si vous avez des idées d’améliorations, ou même une manière totalement différente de procéder, n’hésitez pas à faire un tour dans les commentaires. :)&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Pourquoi ce blog ?</title>
+   <link href="http://blog.gnidmoo.tk/2015/06/02/pourquoi-ce-blog"/>
+   <updated>2015-06-02T00:00:00+02:00</updated>
+   <id>http://blog.gnidmoo.tk/2015/06/02/pourquoi-ce-blog</id>
+   <content type="html">
+&lt;p&gt;Ça fait un moment que j’avais envie de commencer un blog où j’explique ce que je fais, comment je le fais et pourquoi. Puisqu’il n’est jamais trop tard, je commence maintenant.&lt;/p&gt;
+
+&lt;p&gt;Au niveau du contenu, je pense que ça sera principalement du C++, l’avancement de mes projets, du linux, des astuces pour vim, des coups de gueules et peut-être d’autres choses, qui sait.&lt;/p&gt;
 
 </content>
  </entry>
