@@ -90,6 +90,8 @@ hr {
 /* Layout */
 /* line 81, ../_sass/_base.scss */
 .navbar {
+  position: fixed;
+  width: 100%;
   margin-bottom: 0;
 }
 /* line 83, ../_sass/_base.scss */
@@ -124,6 +126,7 @@ hr {
 /* Content */
 /* line 110, ../_sass/_base.scss */
 .content {
+  margin-top: 40px;
   /* when there's no page-header */
   /* Wide column content */
 }
