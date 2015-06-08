@@ -146,7 +146,7 @@
 <div class="row">
   <div class="span8">
     
-<h1 id="introduction">Introduction</h1>
+<h2 id="introduction">Introduction</h2>
 
 <p>L’ECS, pour Entity Component System, est un type d’architecture qui est presque à la mode aujourd’hui et il faut dire qu’il y a de quoi. Il s’agit d’un type d’architecture qui permet surtout d’éviter les énormes arbres d’héritage.</p>
 
@@ -163,13 +163,13 @@
 
 <p>On a besoin de quoi concrètement pour créer une entité dans un ECS ? De ses composants, c’est tout. Donc on peut faire une classe d’entité qui contiendrait un tableau de composants. Est-ce que ces composants ont besoin d’un classe mère <code>Composant</code> ? Pour répondre à cette question, il faudrait déjà savoir ce qu’on va mettre dedans.</p>
 
-<h1 id="les-composants">Les composants</h1>
+<h2 id="les-composants">Les composants</h2>
 
 <p>Dans pas mal d’implémentations que j’ai pu voir, les composants étaient considérés comme des morceaux de données, un peu à la manière des modèles dans l’architecture MVC. Certains utilisent même uniquement des types de bases (<code>bool</code>, <code>std::pair</code>, etc…) et associent un nom à chacun de leurs composants, d’autres ont une classe mère Component, et d’autres ne font ni l’un, ni l’autre. Je fais partie de ces derniers.</p>
 
 <p>Tout d’abord, je me suis demandé de quels composants je pourrais avoir besoin. Mes premières idées m’ont poussé à faire un <code>PositionComponent</code> et un <code>MovementComponent</code>. Le premier contient les coordonnées, la taille et la direction d’une entité, le second contiendra la vélocité, une pile de <code>Movement</code> et des flags utiles pour le jeu (<code>isMoving</code>, <code>isBlocked</code>, …).</p>
 
-<h1 id="les-entits">Les entités</h1>
+<h2 id="les-entits">Les entités</h2>
 
 <p>Mais une question s’est alors posée, comment créer une classe <code>Entity</code> qui contient des composants de différents types en C++ ? C’est là que j’ai eu une idée: étant donné qu’un <code>std::shared_ptr</code> sur <code>void</code> appellera toujours le bon destructeur, peu importe le type qu’on lui donne, ce type de pointeur intelligent est du coup vraiment pratique dans notre cas.</p>
 
@@ -253,7 +253,7 @@
 
 <p>Je ne vais pas m’attarder sur ce code, qui, me semble-t-il, est assez simple à comprendre une fois qu’on a assimilé les notions relatives au C++11.</p>
 
-<h1 id="fabriques-dentits-automatises">Fabriques d’entités automatisées</h1>
+<h2 id="fabriques-dentits-automatises">Fabriques d’entités automatisées</h2>
 
 <p>Afin de fabriquer des entités toutes prêtes, comme une épée ou un monstre, il fallait créer des fabriques. Pour cela, j’ai décidé de faire uniquement des classes avec une fonction statique, par exemple:</p>
 
@@ -283,7 +283,7 @@
 
 <p>Maintenant qu’on sait faire des composants et les utiliser pour paramétrer des entités, il faut trouver une solution pour les lire et effectuer des actions dessus en conséquence.</p>
 
-<h1 id="les-systmes">Les systèmes</h1>
+<h2 id="les-systmes">Les systèmes</h2>
 
 <p>Il s’agit ici d’un concept vraiment simple. J’utilise, comme pour les fabriques, des classes statiques. Je vais donner un exemple simple avant de développer:</p>
 
@@ -347,7 +347,7 @@
 
 <p>Tous les systèmes sont orchestrés par la classe qui est sensée gérer le monde, par exemple <code>World</code>, <code>Scene</code>, ou par un super-système dans mon cas: <code>SceneSystem</code>.</p>
 
-<h1 id="conclusion">Conclusion</h1>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>Ce type d’architecture est vraiment pratique et modulable, facilite la maintenabilité, mais chacun a son implémentation. La mienne ne vous plaira peut-être pas, ou ne sera peut-être pas adaptée pour vos besoins, mais elle était adaptée aux miens.</p>
 
@@ -361,7 +361,7 @@
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next disabled">Next &rarr;</a>
+        <a class="btn next" href="/2015/06/08/gestion-de-ressources" title="Gestion de ressources">Next &rarr;</a>
       
     </div>
     <hr>
@@ -415,9 +415,9 @@
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>1</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>2</span></a></li>
      
-    	<li><a href="/tags.html#c++11-ref">c++11 <span>1</span></a></li>
+    	<li><a href="/tags.html#c++11-ref">c++11 <span>2</span></a></li>
      
     	<li><a href="/tags.html#ecs-ref">ecs <span>1</span></a></li>
     
