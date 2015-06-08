@@ -21,18 +21,21 @@ tagline:
 	<hr />
 {% endfor %}
 
-<div class="pagination">
-	{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path }}" class="previous">&larr; Plus ancien</a>
-	{% else %}
-		<span class="previous">&larr; Plus ancien</span>
-	{% endif %}
-	
-	{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path }}" class="next">Plus récent &rarr;</a>
-	{% else %}
-		<span class="next">Plus récent &rarr;</span>
-	{% endif %}
-	
-	<span class="page_number">Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
-</div>
+{% if paginator.total_pages > 1 %}
+	<div class="pagination">
+		{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path }}" class="previous">&larr; Plus ancien</a>
+		{% else %}
+			<span class="previous">&larr; Plus ancien</span>
+		{% endif %}
+		
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}" class="next">Plus récent &rarr;</a>
+		{% else %}
+			<span class="next">Plus récent &rarr;</span>
+		{% endif %}
+		
+		<span class="page_number">Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
+	</div>
+{% endif %}
+

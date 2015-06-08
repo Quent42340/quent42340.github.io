@@ -7,7 +7,7 @@ tags: [c++, c++11, ecs]
 ---
 {% include JB/setup %}
 
-# Introduction
+## Introduction
 
 L'ECS, pour Entity Component System, est un type d'architecture qui est presque à la mode aujourd'hui et il faut dire qu'il y a de quoi. Il s'agit d'un type d'architecture qui permet surtout d'éviter les énormes arbres d'héritage.
 
@@ -24,13 +24,13 @@ Pour mon Zelda j'ai choisi la première solution, étant donné que c'est celle 
 
 On a besoin de quoi concrètement pour créer une entité dans un ECS ? De ses composants, c'est tout. Donc on peut faire une classe d'entité qui contiendrait un tableau de composants. Est-ce que ces composants ont besoin d'un classe mère `Composant` ? Pour répondre à cette question, il faudrait déjà savoir ce qu'on va mettre dedans.
 
-# Les composants
+## Les composants
 
 Dans pas mal d'implémentations que j'ai pu voir, les composants étaient considérés comme des morceaux de données, un peu à la manière des modèles dans l'architecture MVC. Certains utilisent même uniquement des types de bases (`bool`, `std::pair`, etc...) et associent un nom à chacun de leurs composants, d'autres ont une classe mère Component, et d'autres ne font ni l'un, ni l'autre. Je fais partie de ces derniers.
 
 Tout d'abord, je me suis demandé de quels composants je pourrais avoir besoin. Mes premières idées m'ont poussé à faire un `PositionComponent` et un `MovementComponent`. Le premier contient les coordonnées, la taille et la direction d'une entité, le second contiendra la vélocité, une pile de `Movement` et des flags utiles pour le jeu (`isMoving`, `isBlocked`, ...).
 
-# Les entités
+## Les entités
 
 Mais une question s'est alors posée, comment créer une classe `Entity` qui contient des composants de différents types en C++ ? C'est là que j'ai eu une idée: étant donné qu'un `std::shared_ptr` sur `void` appellera toujours le bon destructeur, peu importe le type qu'on lui donne, ce type de pointeur intelligent est du coup vraiment pratique dans notre cas.
 
@@ -78,7 +78,7 @@ class SceneObject {
 
 Je ne vais pas m'attarder sur ce code, qui, me semble-t-il, est assez simple à comprendre une fois qu'on a assimilé les notions relatives au C++11.
 
-# Fabriques d'entités automatisées
+## Fabriques d'entités automatisées
 
 Afin de fabriquer des entités toutes prêtes, comme une épée ou un monstre, il fallait créer des fabriques. Pour cela, j'ai décidé de faire uniquement des classes avec une fonction statique, par exemple:
 
@@ -100,7 +100,7 @@ Il serait même possible de créer une fabrique unique, qui lirait des fichiers 
 
 Maintenant qu'on sait faire des composants et les utiliser pour paramétrer des entités, il faut trouver une solution pour les lire et effectuer des actions dessus en conséquence.
 
-# Les systèmes
+## Les systèmes
 
 Il s'agit ici d'un concept vraiment simple. J'utilise, comme pour les fabriques, des classes statiques. Je vais donner un exemple simple avant de développer:
 
@@ -139,7 +139,7 @@ L'utilisation des `System` est vraiment pratique dans la mesure où les composan
 
 Tous les systèmes sont orchestrés par la classe qui est sensée gérer le monde, par exemple `World`, `Scene`, ou par un super-système dans mon cas: `SceneSystem`.
 
-# Conclusion
+## Conclusion
 
 Ce type d'architecture est vraiment pratique et modulable, facilite la maintenabilité, mais chacun a son implémentation. La mienne ne vous plaira peut-être pas, ou ne sera peut-être pas adaptée pour vos besoins, mais elle était adaptée aux miens.
 
