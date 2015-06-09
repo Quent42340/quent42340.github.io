@@ -118,12 +118,6 @@
                 
                 
                 
-                <li>
-                  <a href="https://twitter.com/gnidmoo" class="zocial twitter icon" target="_blank">
-                    <span class="hidden-desktop">Twitter</span>
-                  </a>
-                </li>
-                
                 
                 
                 
@@ -246,7 +240,9 @@
 </pre></div>
 </td></tr></table>
 
-<p>Et son utilisation:</p>
+<p>Vous avez certainement remarqué la fonction <code>loadConfigFile</code>, elle permet d’appeller une classe qui va charger des ressources à partir d’un fichier XML. C’est vraiment pratique dans la mesure où la configuration de chaque type de ressource est totalement différente.</p>
+
+<p>Le <code>ResourceHandler</code> s’utilise de cette manière:</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-cpp" data-lang="cpp">1
 2
@@ -262,7 +258,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>Voici un exemple de loader, ici <code>XMLFile</code> est un wrapper de <code>XMLDocument</code> pour tinyxml2:</p>
+<p>Voici un exemple de loader, ici <code>XMLFile</code> est un wrapper de la classe <code>XMLDocument</code> de tinyxml2:</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-cpp" data-lang="cpp"> 1
  2

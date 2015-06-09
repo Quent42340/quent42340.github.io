@@ -4,7 +4,7 @@
  <title>DevBlog de gnidmoo</title>
  <link href="http://blog.gnidmoo.tk/atom.xml" rel="self"/>
  <link href="http://blog.gnidmoo.tk"/>
- <updated>2015-06-08T16:08:35+02:00</updated>
+ <updated>2015-06-09T22:42:14+02:00</updated>
  <id>http://blog.gnidmoo.tk</id>
  <author>
    <name>Quentin Bazin</name>
@@ -118,7 +118,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Et son utilisation:&lt;/p&gt;
+&lt;p&gt;Vous avez certainement remarqué la fonction &lt;code&gt;loadConfigFile&lt;/code&gt;, elle permet d’appeller une classe qui va charger des ressources à partir d’un fichier XML. C’est vraiment pratique dans la mesure où la configuration de chaque type de ressource est totalement différente.&lt;/p&gt;
+
+&lt;p&gt;Le &lt;code&gt;ResourceHandler&lt;/code&gt; s’utilise de cette manière:&lt;/p&gt;
 
 &lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;1
 2
@@ -134,7 +136,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Voici un exemple de loader, ici &lt;code&gt;XMLFile&lt;/code&gt; est un wrapper de &lt;code&gt;XMLDocument&lt;/code&gt; pour tinyxml2:&lt;/p&gt;
+&lt;p&gt;Voici un exemple de loader, ici &lt;code&gt;XMLFile&lt;/code&gt; est un wrapper de la classe &lt;code&gt;XMLDocument&lt;/code&gt; de tinyxml2:&lt;/p&gt;
 
 &lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt; 1
  2
