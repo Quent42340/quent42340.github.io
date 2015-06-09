@@ -66,7 +66,9 @@ class ResourceHandler {
 };
 {% endhighlight %}
 
-Et son utilisation:
+Vous avez certainement remarqué la fonction `loadConfigFile`, elle permet d'appeller une classe qui va charger des ressources à partir d'un fichier XML. C'est vraiment pratique dans la mesure où la configuration de chaque type de ressource est totalement différente.
+
+Le `ResourceHandler` s'utilise de cette manière:
 
 {% highlight cpp %}
 ResourceHandler::getInstance().loadConfigFile<TextureLoader>("config/textures.xml");
@@ -80,7 +82,7 @@ Pour ajouter une ressource on envoie les paramètres du constructeur dans `add`:
 ResourceHandler::getInstance().add<Texture>("graphics/player.png");
 {% endhighlight %}
 
-Voici un exemple de loader, ici `XMLFile` est un wrapper de `XMLDocument` pour tinyxml2:
+Voici un exemple de loader, ici `XMLFile` est un wrapper de la classe `XMLDocument` de tinyxml2:
 
 {% highlight cpp %}
 class ResourceLoader {
