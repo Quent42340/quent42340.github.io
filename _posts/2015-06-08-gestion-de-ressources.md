@@ -79,7 +79,7 @@ Texture &playerTexture = ResourceHandler::getInstance().get<Texture>("playerText
 Pour ajouter une ressource on envoie les paramètres du constructeur dans `add`:
 
 {% highlight cpp %}
-ResourceHandler::getInstance().add<Texture>("graphics/player.png");
+ResourceHandler::getInstance().add<Texture>("playerTexture", "graphics/player.png");
 {% endhighlight %}
 
 Voici un exemple de loader, ici `XMLFile` est un wrapper de la classe `XMLDocument` de tinyxml2:
