@@ -1,4 +1,5 @@
 #!/bin/sh
+jekyll build
 git add .
 git commit -am "$1"
 git push origin blog-source
